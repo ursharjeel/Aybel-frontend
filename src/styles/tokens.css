@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Design tokens — Aybel
+   Liquid-glass surfaces over a soft mesh wallpaper. Light + dark themes.
+   Typography: SF Pro on Apple devices, Inter elsewhere (closest open match).
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Söhne', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', system-ui, sans-serif;
+  --font-display: 'Söhne', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', 'Arial', system-ui, sans-serif;
+  --font-mono: 'Söhne Mono', 'Menlo', 'Monaco', 'Courier New', ui-monospace, monospace;
+
+  --r-xs: 6px;
+  --r-sm: 9px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+
+  --sidebar-w: 248px;
+  --topbar-h: 60px;
+}
+
+/* ---------- light ---------- */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f7f7f7;
+  --text-1: #0d0d0d;
+  --text-2: #1a1a1a;
+  --text-3: #6e6e6e;
+  --text-4: #ababab;
+
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-strong: rgba(255, 255, 255, 0.88);
+  --glass-soft: rgba(255, 255, 255, 0.5);
+  --glass-inset: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --glass-edge: rgba(0, 0, 0, 0.06);
+  --glass-hi: rgba(255, 255, 255, 1);
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 50%);
+  --glass-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 28px -8px rgba(0, 0, 0, 0.12);
+  --glass-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.06), 0 20px 48px -12px rgba(0, 0, 0, 0.18);
+  --blur: 48px;
+  --sat: 180%;
+
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.12);
+  --hover: rgba(0, 0, 0, 0.04);
+  --press: rgba(0, 0, 0, 0.08);
+
+  --accent: #0d0d0d;
+  --accent-2: #1a1a1a;
+  --accent-ink: #0d0d0d;
+  --accent-soft: rgba(0, 0, 0, 0.06);
+  --accent-grad: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+
+  --ok: #0d0d0d;
+  --ok-soft: rgba(0, 0, 0, 0.06);
+  --warn: #0d0d0d;
+  --warn-soft: rgba(0, 0, 0, 0.06);
+  --err: #0d0d0d;
+  --err-soft: rgba(0, 0, 0, 0.06);
+  --info: #0d0d0d;
+  --info-soft: rgba(0, 0, 0, 0.06);
+  --repair: #0d0d0d;
+  --repair-soft: rgba(0, 0, 0, 0.06);
+  --neutral: #6e6e6e;
+  --neutral-soft: rgba(0, 0, 0, 0.04);
+
+  --code-bg: rgba(0, 0, 0, 0.04);
+  --code-key: #0d0d0d;
+  --code-str: #0d0d0d;
+  --code-num: #0d0d0d;
+  --code-bool: #0d0d0d;
+
+  --wall-1: rgba(220, 220, 220, 0.5);
+  --wall-2: rgba(200, 200, 200, 0.45);
+  --wall-3: rgba(210, 210, 210, 0.48);
+  --wall-4: rgba(190, 190, 190, 0.42);
+  --wall-opacity: 0.8;
+}
+
+/* ---------- dark ---------- */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --text-1: #ececec;
+  --text-2: #d1d1d1;
+  --text-3: #ababab;
+  --text-4: #6e6e6e;
+
+  --glass: rgba(26, 26, 26, 0.72);
+  --glass-strong: rgba(30, 30, 30, 0.88);
+  --glass-soft: rgba(255, 255, 255, 0.05);
+  --glass-inset: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-edge: rgba(0, 0, 0, 0.6);
+  --glass-hi: rgba(255, 255, 255, 0.18);
+  --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 50%);
+  --glass-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 12px 28px -8px rgba(0, 0, 0, 0.6);
+  --glass-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.5), 0 20px 48px -12px rgba(0, 0, 0, 0.7);
+  --blur: 52px;
+  --sat: 180%;
+
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --hover: rgba(255, 255, 255, 0.04);
+  --press: rgba(255, 255, 255, 0.08);
+
+  --accent: #ececec;
+  --accent-2: #d1d1d1;
+  --accent-ink: #ececec;
+  --accent-soft: rgba(255, 255, 255, 0.08);
+  --accent-grad: linear-gradient(135deg, #ececec 0%, #d1d1d1 100%);
+
+  --ok: #ececec;
+  --ok-soft: rgba(255, 255, 255, 0.08);
+  --warn: #ececec;
+  --warn-soft: rgba(255, 255, 255, 0.08);
+  --err: #ececec;
+  --err-soft: rgba(255, 255, 255, 0.08);
+  --info: #ececec;
+  --info-soft: rgba(255, 255, 255, 0.08);
+  --repair: #ececec;
+  --repair-soft: rgba(255, 255, 255, 0.08);
+  --neutral: #ababab;
+  --neutral-soft: rgba(255, 255, 255, 0.06);
+
+  --code-bg: rgba(0, 0, 0, 0.3);
+  --code-key: #ececec;
+  --code-str: #ececec;
+  --code-num: #ececec;
+  --code-bool: #ececec;
+
+  --wall-1: rgba(40, 40, 40, 0.4);
+  --wall-2: rgba(50, 50, 50, 0.35);
+  --wall-3: rgba(45, 45, 45, 0.38);
+  --wall-4: rgba(35, 35, 35, 0.32);
+  --wall-opacity: 0.7;
+}
