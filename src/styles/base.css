@@ -163,7 +163,7 @@ a {
   background: var(--glass);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(var(--sat));
   backdrop-filter: blur(var(--blur)) saturate(var(--sat));
-  border-radius: var(--r-lg);
+  border-radius: var(--r-xl);
   box-shadow:
     var(--glass-shadow),
     0 0 0 1px var(--glass-edge),

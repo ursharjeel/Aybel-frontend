@@ -25,7 +25,7 @@ export function Overview() {
 
       <StatsGrid />
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(460px, 1fr))', gap: '16px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', gap: '16px' }}>
         <TimelineChart />
         <TaskBreakdown />
       </div>
